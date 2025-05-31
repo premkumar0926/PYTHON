@@ -1,0 +1,55 @@
+import time 
+import random
+name1=input("enter player no 1")
+name2=input("enter player no 2")
+print("hello[]and()".format(name1,name2))
+print("computer has fixed 5 integer in mind")
+print("you both have 4 choice to guess")
+nums=[]
+while(len(nums)!=5):
+    d=random.randint(1,10)
+    if(d in nums):
+        continue
+    else:
+        nums.append(d)
+player1=[]
+player2=[]
+s1=0
+s2=0 
+for i in range(3):
+    print("()enter your guess".format(name1))
+    ans=int (input ())
+    if(ans not in player1 or ans not in player2):
+        player1.append(ans)
+        if(ans in nums):
+            print("----->correct")
+            s1=s1+1 
+        else:
+            print("------->worng")
+    print("()enter your guess".format(name2))
+    ans=int(input())
+    if(ans not in player1 or ans not in player2):
+        player2.append(ans)
+        if(ans in nums):
+            print("----->correct")
+            s2=s2+1 
+        else:
+            print("------->worng")
+    else:
+        ans=int(input("it is already choiced guess some other"))
+time.sleep(2)
+print("-------------------")
+print("lets us have summary")
+print("computer as nums")
+print("{}predicted{}".format(name1,player1))
+print("{}score{}".format(name1,s1))
+print("---------")
+print("{}predicted{}".format(name2,player2))
+print("{}score{}".format(name2,s2))
+print("---------")
+if(s1>s2):
+    print("{}is winner".format(name1))
+elif(s2>s1):
+    print("{}is winner".format(name2))
+else:
+    print("Draw")
