@@ -1,0 +1,38 @@
+def cri():
+    c=int(input("enter radious of cri:"))
+    print("area of cri is",3.13*c*c)
+    
+def rec(a,b):
+    print("area of rec is",a*b)
+    
+def tri():
+    b=int(input("enter base:"))
+    h=int(input("enter height"))
+    return 0.5*b*h
+
+def squ(a):
+    return a*b
+
+while("true"):
+    print("1.cri")
+    print("2.rec")
+    print("3.tri")
+    print("4.squ")
+    print("5.exit")
+    d=int(input("enter your choice:"))
+    match d:
+        case 1:
+            cri()
+        case 2:
+            l=int(input("enter lenght of rec:"))
+            b=int(input("enter breath of rec:"))
+            rec(l,b)
+        case 3:
+            res=tri()
+            print("ares of tri is",res)
+        case 4:
+            a=int(input("enter side of squ:"))
+            res1=squ(a)
+            print("area of squ is",res1)
+        case 5:
+            break
